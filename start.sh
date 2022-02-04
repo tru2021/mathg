@@ -58,6 +58,8 @@ filebrowser config set -p 60002
 #screen -x -S $screen_name -p 0 -X stuff "$cmd"
 #screen -x -S $screen_name -p 0 -X stuff '\n'
 
+supervisord -c /supervisord.conf
+
 service redis-server start &
 /etc/init.d/redis-server restart >/dev/null 2>&1 &
 service nginx start &
@@ -65,4 +67,3 @@ service nginx start &
 
 #wstunnel -s 0.0.0.0:80 &
 /usr/sbin/sshd -D
-supervisord -c /supervisord.conf
