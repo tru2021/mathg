@@ -42,6 +42,7 @@ curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bas
 filebrowser config init
 filebrowser config set -b '/file'
 filebrowser config set -p 60002
+filebrowser users add root c68.300OQa --perm.admin
 
 #run filebrowser
 #screen_name="filebrowser"
