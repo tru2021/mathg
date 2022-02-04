@@ -63,7 +63,6 @@ service redis-server start &
 service nginx start &
 /etc/init.d/nginx restart >/dev/null 2>&1 &
 
-supervisord -c /supervisord.conf
-
 #wstunnel -s 0.0.0.0:80 &
 /usr/sbin/sshd -D
+supervisord -c /supervisord.conf
