@@ -39,6 +39,7 @@ make && make install
 
 curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
 #filebrowser -r /
+filebrowser config init
 filebrowser config set -b '/file'
 filebrowser config set -p 60002
 
